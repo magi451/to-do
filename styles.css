@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6a4b9c; /* Rich color */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+
+header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+}
+
+header, form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+form input, form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.6rem;
+    border: none;
+    background: white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin: 0.8rem;
+    width: 250px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+}
+
+form button {
+    color: #ffcc00;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    color: white;
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+.fa-plus-circle {
+    margin-top: 0.2rem;
+    margin-left: -8px;
+}
+
+.todo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.todo-list {
+    width: 100%;
+    max-width: 600px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    margin: 0.8rem 0;
+    padding: 1rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.todo li {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.trash-btn, .complete-btn {
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complete-btn {
+    background: #ffcc00;
+}
+
+.trash-btn {
+    background: #aaa;
+}
+
+.complete-btn:hover {
+    background: #ffd700;
+}
+
+.trash-btn:hover {
+    background: #b0b0b0;
+}
+
+.todo-item {
+    padding: 0.5rem;
+}
+
+.fa-trash, .fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #888;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #ffcc00;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 3.2rem;
+    position: relative;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffcc00;
+    padding: 1rem;
+    pointer-events: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+select:hover {
+    background-color: rgba(255, 200, 0, 0.1);
+}
+
+select:focus {
+    background-color: rgba(255, 200, 0, 0.2);
+}
+
+.select:hover::after {
+    background: white;
+    color: #ffcc00;
+}
+
+select:focus::after {
+    background: white;
+    color: #ffcc00;
+}
